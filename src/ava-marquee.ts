@@ -11,13 +11,8 @@ export class AvaMarquee extends LitElement {
     }
 
     :host([direction='vertical']) {
-      height: var(--height, 100%);
-
       .container {
-        padding-left: 0;
-        padding-top: 100%;
-        display: block;
-        writing-mode: vertical-lr;
+        writing-mode: sideways-lr;
       }
     }
 
@@ -27,7 +22,6 @@ export class AvaMarquee extends LitElement {
 
     @media (prefers-reduced-motion: no-preference) {
       .container {
-        padding-left: 100%;
         animation: var(--animation-name, scroll-horizontal) var(--speed, 60s)
           linear infinite;
       }
